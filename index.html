@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.png">
+    <title>WaveBeat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <div class="name">
+            <h1>WaveBeat Music</h1>
+        </div>
+        <section class="nav">
+            <div class="scroller">
+                <h3 data-target="song">Songs</h3>
+                <h3 data-target="album">Albums</h3>
+                <h3 data-target="recent">Recently Played</h3>
+                <!-- <h3 data-target="fav">Favorite</h3> -->
+            </div>
+        </section>
+        <section id="song">
+            <div class="btns">
+                <button><i class="ri-add-line"></i></button>
+                <input type="file" name="songInp" id="inputSong" accept="audio/*" multiple style="display: none;">
+            </div>
+            <ul></ul>
+        </section>
+        <div id="musicPlay">
+            <i id="backbtn" class="ri-arrow-left-line"></i>
+            <div class="musicimg">
+                <img src="./Assets/defaultimg.png " class="img" alt="">
+                <i class="ri-pause-line"></i>
+            </div>
+            <!-- <div class="fav"><i class="ri-heart-3-line"></i></div> -->
+            <div class="volum">
+                <i class="ri-volume-down-fill"></i>
+                <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+            </div>
+            <h6 class="songname">THis is song naem</h6>
+            <div id="waveform"></div>
+            <div class="controls">
+                <i class="ri-skip-back-line" id="prevBtn" title="Previous"></i>
+                <i class="ri-pause-fill" id="playPauseBtn" title="Play/Pause"></i>
+                <i class="ri-skip-forward-line" id="nextBtn" title="Next"></i>
+            </div>
+        </div>
+        <section id="album">
+            <h1>Comming Soonn Addd........</h1>
+        </section>
+        <section id="recent">
+            <ul id="recentList"></ul>
+        </section>
+        
+        <!-- <section id="fav">
+            <h1>this is fav</h1>
+        </section> -->
+    </main>
+
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/nanoid/nanoid.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
